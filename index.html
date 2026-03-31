@@ -908,7 +908,8 @@ async function saveScriptUrl() {
   const url = document.getElementById('scriptUrlInput').value.trim();
   if (!url.startsWith('https://')) { showToast('Please enter a valid https:// URL','warn'); return; }
   scriptUrl = url;
-  localStorage.setItem('liftlog_script_url', url);
+  localStorage.removeItem('liftlog_script_url');
+  localStorage.setItem('liftlog_script_url_v2', url);
   document.getElementById('setupBanner').classList.add('hidden');
   closeSetup();
   setSyncStatus('syncing');
