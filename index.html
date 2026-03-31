@@ -906,7 +906,7 @@ function closeSetup() { document.getElementById('setupModal').classList.remove('
 function copyScript() { navigator.clipboard?.writeText(document.getElementById('scriptCode').textContent).then(() => showToast('Script copied!')); }
 async function saveScriptUrl() {
   const url = document.getElementById('scriptUrlInput').value.trim();
-  if (!url.startsWith('https://script.google.com')) { showToast('Paste the Web App URL from step 3','warn'); return; }
+  if (!url.startsWith('https://')) { showToast('Please enter a valid https:// URL','warn'); return; }
   scriptUrl = url;
   localStorage.setItem('liftlog_script_url', url);
   document.getElementById('setupBanner').classList.add('hidden');
