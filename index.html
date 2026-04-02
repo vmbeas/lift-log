@@ -341,18 +341,18 @@ function doGet(e) {
 <script>
 // ─── RUN PLAN DATA ────────────────────────────────────────────────────────────
 const RUN_PLAN = {
-  1:  { phase:'P1', runA:'Easy 30 min', hrA:'Z2  135–152 bpm', paceA:'10:30–11:30/mi', runB:'Long 3.5 mi', hrB:'Z1–Z2  115–152 bpm', paceB:'10:30–11:30/mi', note:'Habit building — just show up' },
-  2:  { phase:'P1', runA:'Easy 33 min', hrA:'Z2  135–152 bpm', paceA:'10:30–11:30/mi', runB:'Long 4 mi', hrB:'Z1–Z2  115–152 bpm', paceB:'10:30–11:30/mi', note:'Volume base' },
-  3:  { phase:'P1', runA:'Easy 36 min', hrA:'Z2  135–152 bpm', paceA:'10:15–11:00/mi', runB:'Long 4.5 mi', hrB:'Z1–Z2  115–152 bpm', paceB:'10:30–11:30/mi', note:'Extending range' },
-  4:  { phase:'P1', runA:'Easy 25 min DELOAD', hrA:'Z1–Z2  115–152 bpm', paceA:'Relaxed', runB:'Long 3 mi DELOAD', hrB:'Z1  115–135 bpm', paceB:'Relaxed', note:'Deload — absorb training, take it easy' },
-  5:  { phase:'P2', runA:'4×3 min hard / 2 min easy', hrA:'Hard: Z4 163–172 / Easy: Z2 135–152', paceA:'Hard: 8:30–9:00 / Easy: 10:30–11:00', runB:'Long 5 mi', hrB:'Z2  135–152 bpm', paceB:'10:15–11:00/mi', note:'First intervals — hard effort should feel like 3–4 words max' },
-  6:  { phase:'P2', runA:'5×3 min hard / 2 min easy', hrA:'Hard: Z4 163–172 / Easy: Z2 135–152', paceA:'Hard: 8:30–9:00 / Easy: 10:30–11:00', runB:'Long 5.5 mi', hrB:'Z2  135–152 bpm', paceB:'10:15–11:00/mi', note:'Speed exposure' },
-  7:  { phase:'P2', runA:'5×4 min hard / 2 min easy', hrA:'Hard: Z4 163–172 / Easy: Z2 135–152', paceA:'Hard: 8:15–9:00 / Easy: 10:30–11:00', runB:'Long 6 mi', hrB:'Z2  135–152 bpm', paceB:'10:00–10:45/mi', note:'Near 10K distance on the long run' },
-  8:  { phase:'P2', runA:'Easy 25 min DELOAD', hrA:'Z1–Z2  115–152 bpm', paceA:'Relaxed', runB:'Long 3.5 mi DELOAD', hrB:'Z1  115–135 bpm', paceB:'Relaxed', note:'Deload — absorb the interval work' },
-  9:  { phase:'P3', runA:'5E + 15 min tempo + 5E', hrA:'Tempo: Z3 152–163 / Warm+Cool: Z1–Z2', paceA:'Tempo: 9:15–10:00 / Warm+Cool: 10:30+', runB:'Long 6.5 mi', hrB:'Z2  135–152 bpm', paceB:'10:00–10:45/mi', note:'Speed + distance combo week' },
-  10: { phase:'P3', runA:'5E + 20 min tempo + 5E', hrA:'Tempo: Z3 152–163 / Warm+Cool: Z1–Z2', paceA:'Tempo: 9:00–9:45 / Warm+Cool: 10:30+', runB:'Long 7 mi', hrB:'Z2  135–152 bpm', paceB:'10:00–10:45/mi', note:'Slight overreach — push the tempo block' },
-  11: { phase:'P3', runA:'5E + 25 min tempo + 5E', hrA:'Tempo: Z3–Z4 152–172 / Warm+Cool: Z1–Z2', paceA:'Tempo: 9:00–9:30 / Warm+Cool: 10:30+', runB:'Long 6.2 mi — full 10K!', hrB:'Z2  135–152 bpm', paceB:'10:00–10:30/mi', note:'YOU RUN A 10K THIS WEEK 🎯' },
-  12: { phase:'P3', runA:'Easy 25 min race prep', hrA:'Z1–Z2  115–152 bpm', paceA:'Relaxed', runB:'Long 4 mi shakeout', hrB:'Z1–Z2  115–152 bpm', paceB:'Relaxed', note:'Race ready — keep it light, legs fresh' },
+  1:  { phase:'P1', runA:'Easy 30 min', hrA:'Z2  123–136 bpm', paceA:'10:30–11:30/mi', runB:'Long 3.5 mi', hrB:'Z1–Z2  109–136 bpm', paceB:'10:30–11:30/mi', note:'Habit building — just show up' },
+  2:  { phase:'P1', runA:'Easy 33 min', hrA:'Z2  123–136 bpm', paceA:'10:30–11:30/mi', runB:'Long 4 mi', hrB:'Z1–Z2  109–136 bpm', paceB:'10:30–11:30/mi', note:'Volume base' },
+  3:  { phase:'P1', runA:'Easy 36 min', hrA:'Z2  123–136 bpm', paceA:'10:15–11:00/mi', runB:'Long 4.5 mi', hrB:'Z1–Z2  109–136 bpm', paceB:'10:30–11:30/mi', note:'Extending range' },
+  4:  { phase:'P1', runA:'Easy 25 min DELOAD', hrA:'Z1–Z2  109–136 bpm', paceA:'Relaxed', runB:'Long 3 mi DELOAD', hrB:'Z1  109–123 bpm', paceB:'Relaxed', note:'Deload — absorb training, take it easy' },
+  5:  { phase:'P2', runA:'4×3 min hard / 2 min easy', hrA:'Hard: Z4 149–163 / Easy: Z2 123–136', paceA:'Hard: 8:30–9:00 / Easy: 10:30–11:00', runB:'Long 5 mi', hrB:'Z2  123–136 bpm', paceB:'10:15–11:00/mi', note:'First intervals — hard effort should feel like 3–4 words max' },
+  6:  { phase:'P2', runA:'5×3 min hard / 2 min easy', hrA:'Hard: Z4 149–163 / Easy: Z2 123–136', paceA:'Hard: 8:30–9:00 / Easy: 10:30–11:00', runB:'Long 5.5 mi', hrB:'Z2  123–136 bpm', paceB:'10:15–11:00/mi', note:'Speed exposure' },
+  7:  { phase:'P2', runA:'5×4 min hard / 2 min easy', hrA:'Hard: Z4 149–163 / Easy: Z2 123–136', paceA:'Hard: 8:15–9:00 / Easy: 10:30–11:00', runB:'Long 6 mi', hrB:'Z2  123–136 bpm', paceB:'10:00–10:45/mi', note:'Near 10K distance on the long run' },
+  8:  { phase:'P2', runA:'Easy 25 min DELOAD', hrA:'Z1–Z2  109–136 bpm', paceA:'Relaxed', runB:'Long 3.5 mi DELOAD', hrB:'Z1  109–123 bpm', paceB:'Relaxed', note:'Deload — absorb the interval work' },
+  9:  { phase:'P3', runA:'5E + 15 min tempo + 5E', hrA:'Tempo: Z3 136–149 / Warm+Cool: Z1–Z2', paceA:'Tempo: 9:15–10:00 / Warm+Cool: 10:30+', runB:'Long 6.5 mi', hrB:'Z2  123–136 bpm', paceB:'10:00–10:45/mi', note:'Speed + distance combo week' },
+  10: { phase:'P3', runA:'5E + 20 min tempo + 5E', hrA:'Tempo: Z3 136–149 / Warm+Cool: Z1–Z2', paceA:'Tempo: 9:00–9:45 / Warm+Cool: 10:30+', runB:'Long 7 mi', hrB:'Z2  123–136 bpm', paceB:'10:00–10:45/mi', note:'Slight overreach — push the tempo block' },
+  11: { phase:'P3', runA:'5E + 25 min tempo + 5E', hrA:'Tempo: Z3–Z4 136–163 / Warm+Cool: Z1–Z2', paceA:'Tempo: 9:00–9:30 / Warm+Cool: 10:30+', runB:'Long 6.2 mi — full 10K!', hrB:'Z2  123–136 bpm', paceB:'10:00–10:30/mi', note:'YOU RUN A 10K THIS WEEK 🎯' },
+  12: { phase:'P3', runA:'Easy 25 min race prep', hrA:'Z1–Z2  109–136 bpm', paceA:'Relaxed', runB:'Long 4 mi shakeout', hrB:'Z1–Z2  109–136 bpm', paceB:'Relaxed', note:'Race ready — keep it light, legs fresh' },
 };
 
 // ─── WORKOUT DATA ─────────────────────────────────────────────────────────────
@@ -445,7 +445,7 @@ let restInterval = null;
 let restSecs = 0;
 let setData = {};
 let lastSessionWeights = {};
-let scriptUrl = localStorage.getItem('liftlog_script_url_v2') || 'https://lift-log-sync.victormbeas.workers.dev/';
+let scriptUrl = localStorage.getItem('liftlog_script_url') || '';
 let sessionFinished = false;
 let runFeel = 0;
 let runType = 'A'; // 'A' = Tuesday, 'B' = Saturday
@@ -654,11 +654,11 @@ function renderRun() {
   html += `<div class="section-label run-section">HR Zones Reference</div>
   <div class="exercise-card">
     <div style="padding:10px 12px;font-family:'DM Mono',monospace;font-size:11px;line-height:2;color:var(--muted)">
-      <span style="color:var(--blue)">Z1</span> 115–135 bpm · 11:30+/mi · Very easy, full conversation<br>
-      <span style="color:var(--done)">Z2</span> 135–152 bpm · 10:00–11:30/mi · Easy, full sentences ← <span style="color:var(--done)">EASY RUNS</span><br>
-      <span style="color:var(--warn)">Z3</span> 152–163 bpm · 9:00–10:00/mi · Moderate, short sentences ← <span style="color:var(--warn)">TEMPO</span><br>
-      <span style="color:var(--red)">Z4</span> 163–172 bpm · 8:15–9:00/mi · Hard, 3–4 words max ← <span style="color:var(--red)">INTERVALS</span><br>
-      <span style="color:var(--muted)">Z5</span> 172+ bpm · &lt;8:15/mi · Max, can't speak · Not used
+      <span style="color:var(--blue)">Z1</span> 109–123 bpm · 11:30+/mi · Very easy, full conversation<br>
+      <span style="color:var(--done)">Z2</span> 123–136 bpm · 10:30–11:30/mi · Easy, full sentences ← <span style="color:var(--done)">EASY RUNS</span><br>
+      <span style="color:var(--warn)">Z3</span> 136–149 bpm · 9:30–10:30/mi · Moderate, short sentences ← <span style="color:var(--warn)">TEMPO</span><br>
+      <span style="color:var(--red)">Z4</span> 149–163 bpm · 8:30–9:30/mi · Hard, 3–4 words max ← <span style="color:var(--red)">INTERVALS</span><br>
+      <span style="color:var(--muted)">Z5</span> 163+ bpm · &lt;8:30/mi · Max, can't speak · Not used
     </div>
   </div>`;
 
@@ -906,10 +906,9 @@ function closeSetup() { document.getElementById('setupModal').classList.remove('
 function copyScript() { navigator.clipboard?.writeText(document.getElementById('scriptCode').textContent).then(() => showToast('Script copied!')); }
 async function saveScriptUrl() {
   const url = document.getElementById('scriptUrlInput').value.trim();
-  if (!url.startsWith('https://')) { showToast('Please enter a valid https:// URL','warn'); return; }
+  if (!url.startsWith('https://script.google.com')) { showToast('Paste the Web App URL from step 3','warn'); return; }
   scriptUrl = url;
-  localStorage.removeItem('liftlog_script_url');
-  localStorage.setItem('liftlog_script_url_v2', url);
+  localStorage.setItem('liftlog_script_url', url);
   document.getElementById('setupBanner').classList.add('hidden');
   closeSetup();
   setSyncStatus('syncing');
